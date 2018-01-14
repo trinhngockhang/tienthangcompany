@@ -1,0 +1,44 @@
+{
+  "name": "anlancan",
+  "version": "1.0.0",
+  "description": "\"react template\"",
+  "main": "index.js",
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production webpack --progress",
+    "build": "next build & npm run prod",
+    "dev": "next",
+    "start": "cross-env NODE_ENV=development nodemon server.js & webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "next": "^4.2.3",
+    "next-redux-wrapper": "^1.3.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.3",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.8",
+    "file-loader": "^1.1.6",
+    "nodemon": "^1.14.11",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^2.0.10",
+    "raw-loader": "^0.5.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  }
+}
