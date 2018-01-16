@@ -31,6 +31,18 @@ app.prepare().then(() => {
             res.send("done");
         })
     })
+
+    server.delete('/delete',(req,res) =>{
+        var id = req.body.id;
+        productController.deleteProduct(id,(err,done) =>{
+            if(err){
+                console.log(err);
+            }else{
+                console.log('done');
+                res.send('done');
+            }
+        })
+    })
     server.get('*', (req, res) => {
         return handle(req, res);
     });
