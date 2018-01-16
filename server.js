@@ -8,6 +8,7 @@ const app = next({ dev });
 const mongoose= require('mongoose');
 const Router = require('./src');
 const handle = app.getRequestHandler();
+const product = require('./api/product');
 const productController = require('./api/product/productController');
 const connectionString = "mongodb://localhost/tienthang";
 app.prepare().then(() => {
@@ -15,34 +16,13 @@ app.prepare().then(() => {
     server.use(compression());
     server.use(bodyParser.json({ extend: true }));
     server.use(bodyParser.urlencoded({ extend: true }));
+    server.use('/product',product);
     //listen
     server.get('/', (req, res) => {
         console.log("a");
         res.send("home");
     });
-    server.post('/addProduct',(req,res) => {
-        var product = {};
-        product.name = req.body.name;
-        product.description = req.body.description;
-        product.price = req.body.price;
-        productController.saveProduct(product,(err,doc) =>{
-            if(err) console.log(err);
-            console.log("done");
-            res.send("done");
-        })
-    })
-
-    server.delete('/delete',(req,res) =>{
-        var id = req.body.id;
-        productController.deleteProduct(id,(err,done) =>{
-            if(err){
-                console.log(err);
-            }else{
-                console.log('done');
-                res.send('done');
-            }
-        })
-    })
+    
     server.get('*', (req, res) => {
         return handle(req, res);
     });
