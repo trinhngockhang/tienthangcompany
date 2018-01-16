@@ -6,7 +6,7 @@ const prod = process.env.NODE_ENV === 'production';
 module.exports = {
     webpack: (config, { dev }) => {
         config.resolve = {
-            modules: ['app', 'node_modules'],
+            modules: ['pages', 'node_modules'],
             extensions: [
                 '.js',
                 '.jsx',
@@ -15,6 +15,10 @@ module.exports = {
             ],
         }
         config.module.rules.push(
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000'
+            },
             {
                 test: /\.(css|scss)/,
                 loader: 'emit-file-loader',

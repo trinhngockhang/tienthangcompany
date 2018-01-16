@@ -17,6 +17,7 @@ app.prepare().then(() => {
     server.use(bodyParser.urlencoded({ extend: true }));
     //listen
     server.get('/', (req, res) => {
+        console.log("a");
         res.send("home");
     });
     server.post('/addProduct',(req,res) => {
@@ -33,9 +34,6 @@ app.prepare().then(() => {
     server.get('*', (req, res) => {
         return handle(req, res);
     });
-
-    
-    
 
 
     server.listen(PORT, err => {
