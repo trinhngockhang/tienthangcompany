@@ -6,44 +6,35 @@ const PORT = 6969 || process.env.PORT;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const mongoose = require('mongoose');
+const LRUCache = require('lru-cache');
 const Router = require('./src');
 const handle = app.getRequestHandler();
+const product = require('./api/product');
 const productController = require('./api/product/productController');
 const connectionString = "mongodb://localhost/tienthang";
+let cacheTime = 1000 * 60 * 60;
+
+if (dev) {
+  cacheTime = 100;
+}
+
+const ssrCache = new LRUCache({
+  max: 100,
+  maxAge: cacheTime
+})
+
+
 app.prepare().then(() => {
     const server = express();
     server.use(compression());
     server.use(bodyParser.json({ extend: true }));
     server.use(bodyParser.urlencoded({ extend: true }));
+    server.use('/product',product);
     //listen
     server.get('/', (req, res) => {
-        console.log("a");
-        res.send("home");
+        renderAndCache(req, res, '/');
     });
-
-    server.post('/addProduct', (req, res) => {
-        var product = {};
-        product.name = req.body.name;
-        product.description = req.body.description;
-        product.price = req.body.price;
-        productController.saveProduct(product, (err, doc) => {
-            if (err) console.log(err);
-            console.log("done");
-            res.send("done");
-        })
-    })
-
-    server.delete('/delete', (req, res) => {
-        var id = req.body.id;
-        productController.deleteProduct(id, (err, done) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log('done');
-                res.send('done');
-            }
-        })
-    })
+    
     server.get('*', (req, res) => {
         return handle(req, res);
     });
@@ -68,25 +59,18 @@ function getCacheKey(req) {
 
 function renderAndCache(req, res, pagePath, queryParams) {
     const key = getCacheKey(req)
-
-    // If we have a page in the cache, let's serve it
     if (ssrCache.has(key)) {
         console.log(`CACHE HIT: ${key}`)
         res.send(ssrCache.get(key))
         return
     }
 
-    // If not let's render the page into HTML
     app
         .renderToHTML(req, res, pagePath, queryParams)
         .then(html => {
-            // Let's cache this page
-            console.log(`CACHE MISS: ${key}`)
-            ssrCache.set(key, html)
-
-            res.send(html)
+            res.send(html);
         })
         .catch(err => {
-            app.renderError(err, req, res, pagePath, queryParams)
+            app.renderError(err, req, res, pagePath, queryParams);
         })
 }

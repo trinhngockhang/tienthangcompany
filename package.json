@@ -7,7 +7,7 @@
     "prod": "cross-env NODE_ENV=production webpack --progress",
     "build": "next build & npm run prod",
     "dev": "next",
-    "start": "cross-env NODE_ENV=development nodemon server.js & webpack -w",
+    "start": "cross-env NODE_ENV=development nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
