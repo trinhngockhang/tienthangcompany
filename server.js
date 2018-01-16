@@ -17,7 +17,7 @@ app.prepare().then(() => {
     //listen
 
     server.get('/', (req, res) => {
-       res.send('hollo');
+        return handle(req, res);
     })
 
     server.get('*', (req, res) => {

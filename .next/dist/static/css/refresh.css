@@ -1,0 +1,3 @@
+"use strict";
+
+module.exports = "body {\r\n    padding: 0;\r\n    margin: 0;\r\n    border: none;\r\n    color: blue;\r\n}";
