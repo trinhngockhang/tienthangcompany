@@ -6,7 +6,7 @@
   "scripts": {
     "prod": "cross-env NODE_ENV=production webpack --progress",
     "build": "next build & npm run prod",
-    "dev": "cross-env NODE_ENV=development node server.js",
+    "dev": "next",
     "start": "cross-env NODE_ENV=development nodemon server.js & webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,7 @@
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "express": "^4.16.2",
+    "mongoose": "^4.13.9",
     "next": "^4.2.3",
     "next-redux-wrapper": "^1.3.5",
     "react": "^16.2.0",

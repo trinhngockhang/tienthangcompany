@@ -4,6 +4,7 @@ import style from '../static/css/refresh.css';
 import { addProduct } from '../actions';
 
 class Home extends React.Component {
+    
     render() {
         return (
             <div>
