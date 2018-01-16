@@ -15,12 +15,13 @@ app.prepare().then(() => {
     server.use(bodyParser.json({ extend: true }));
     server.use(bodyParser.urlencoded({ extend: true }));
     //listen
+
+    server.get('/', (req, res) => {
+       res.send('hollo');
+    })
+
     server.get('*', (req, res) => {
         return handle(req, res);
-    });
-
-    server.get('/about', (req, res) => {
-        return app.render(req, res, '/about');
     });
 
     server.listen(PORT, err => {
