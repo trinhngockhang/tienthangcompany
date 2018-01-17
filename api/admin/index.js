@@ -5,10 +5,11 @@ const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 const adminController = require('./adminController');
-
+const middleware = require('../middleware/middleware');
 
 Router.use(Passport.initialize());
 Router.use(Passport.session());
+
 
 Passport.use(new LocalStrategy(
     (username, password, done) => {
@@ -50,14 +51,15 @@ Passport.deserializeUser((user, done) => {
     })
 })
 
-Router.get('/', (req, res) => {
-    res.send("ahihi");
+Router.get('/product',middleware.confirmLogin,(req,res) => {
+    res.send('login thành công');
 })
+
 
 Router.route('/login')
     .post(Passport.authenticate('local', {
-        failureRedirect: '/',
-        successRedirect: '/admin'
+        failureRedirect: '/admin',
+        successRedirect: '/admin/product'
     }));
 
 Router.post('/signup', (req, res) => {

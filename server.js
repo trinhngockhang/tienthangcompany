@@ -12,8 +12,11 @@ const handle = app.getRequestHandler();
 const product = require('./api/product');
 const productController = require('./api/product/productController');
 const admin = require('./api/admin');
+const session = require('express-session');
 const connectionString = "mongodb://localhost/tienthang";
 let cacheTime = 1000 * 60 * 60;
+
+
 
 if (dev) {
   cacheTime = 100;
@@ -27,6 +30,12 @@ const ssrCache = new LRUCache({
 
 app.prepare().then(() => {
     const server = express();
+    server.use(session({
+        secret: "aicungbietkhangdeptrainhungkhongbietsecretnaylagi",
+        cookie: {
+          maxAge : 1000*60*5*10000000000 //khoang thoi gian luu cookie
+          }
+        }))
     server.use(compression());
     server.use(bodyParser.json({ extend: true }));
     server.use(bodyParser.urlencoded({ extend: true }));
