@@ -11,6 +11,7 @@ const Router = require('./src');
 const handle = app.getRequestHandler();
 const product = require('./api/product');
 const productController = require('./api/product/productController');
+const admin = require('./api/admin');
 const connectionString = "mongodb://localhost/tienthang";
 let cacheTime = 1000 * 60 * 60;
 
@@ -30,6 +31,7 @@ app.prepare().then(() => {
     server.use(bodyParser.json({ extend: true }));
     server.use(bodyParser.urlencoded({ extend: true }));
     server.use('/product',product);
+    server.use('/admin',admin);
     //listen
     server.get('/', (req, res) => {
         renderAndCache(req, res, '/');
