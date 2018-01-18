@@ -41,7 +41,20 @@ var deleteProduct = (id,cb) =>{
     })
 }
 
+var updateProduct = (id,product,cb ) => {
+  productModel.findOneAndUpdate({id:id},product)
+  .exec((err,doc) => {
+    if(err){
+      console.log(err);
+      return cb(err);
+    }else{
+      return cb(null,doc);
+    }
+  })
+}
+
 module.exports = {
     saveProduct,
-    deleteProduct
+    deleteProduct,
+    updateProduct
 }

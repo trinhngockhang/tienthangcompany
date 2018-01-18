@@ -6,33 +6,29 @@ const PORT = 6969 || process.env.PORT;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const mongoose = require('mongoose');
-const LRUCache = require('lru-cache');
-const Router = require('./src');
 const handle = app.getRequestHandler();
 const product = require('./api/product');
 const productController = require('./api/product/productController');
+const admin = require('./api/admin');
+const session = require('express-session');
 const connectionString = "mongodb://localhost/tienthang";
-let cacheTime = 1000 * 60 * 60;
-
-if (dev) {
-  cacheTime = 1000*60;
-}
-
-const ssrCache = new LRUCache({
-  max: 100,
-  maxAge: cacheTime
-})
-
 
 app.prepare().then(() => {
     const server = express();
+    server.use(session({
+        secret: "aicungbietkhangdeptrainhungkhongbietsecretnaylagi",
+        cookie: {
+          maxAge : 1000*60*5*10000000000 //khoang thoi gian luu cookie
+          }
+        }))
     server.use(compression());
     server.use(bodyParser.json({ extend: true }));
     server.use(bodyParser.urlencoded({ extend: true }));
     server.use('/product',product);
+    server.use('/admin',admin);
     //listen
     server.get('/', (req, res) => {
-        renderAndCache(req, res, '/');
+        return app.render(req, res, '/');
     });
     
     server.get('*', (req, res) => {
@@ -53,27 +49,3 @@ mongoose.connect(connectionString, (err) => {
     }
 });
 
-function getCacheKey(req) {
-    return `${req.url}`
-}
-
-function renderAndCache(req, res, pagePath, queryParams) {
-    const key = getCacheKey(req)
-    if (ssrCache.has(key)) {
-        console.log(`CACHE HIT: ${key}`)
-        res.send(ssrCache.get(key))
-        return
-    }
-
-    app
-        .render(req, res, pagePath, queryParams)
-        .then(html => {
-            console.log(`CACHE MISS: ${key}`);
-            ssrCache.set(key, html);
-      
-            res.send(html);
-        })
-        .catch(err => {
-            app.renderError(err, req, res, pagePath, queryParams);
-        })
-}

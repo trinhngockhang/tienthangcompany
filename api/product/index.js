@@ -29,4 +29,21 @@ Router.delete('/delete',(req,res) =>{
         }
     })
 })
+
+Router.put('/update',(req,res) => {
+    var productUpdate = {};
+    var id = req.body.id;
+    productUpdate.name = req.body.name;
+    productUpdate.description = req.body.description;
+    productUpdate.price = req.body.price;
+    productController.updateProduct(id,productUpdate,(err,doc) =>{
+        if(err){
+            res.send(err);
+        }else{
+            res.send("doneee");
+        }
+    })
+    
+})
+
 module.exports= Router;

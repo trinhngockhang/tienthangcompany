@@ -1,18 +1,20 @@
 import React from 'react';
-import PageWrapper from '../hoc';
-import style from '../static/css/refresh.css';
+import PageWrapper from '../layouts';
 import { addProduct } from '../actions';
+import Header from '../components/Header';
+import HomeBody from '../components/HomeBody';
+import Footer from '../components/Footer';
 
-class Home extends React.Component {
-    
+class Home extends React.Component { 
     render() {
         return (
-            <div>
-                <div>Hello, An lan can</div>
-                <style dangerouslySetInnerHTML={{ __html: style }} />
-            </div>
+            <PageWrapper>
+                <Header/>
+                <HomeBody/>
+                <Footer/>
+            </PageWrapper>
         )
     }
 }
 
-export default PageWrapper(Home);
+export default Home;
