@@ -15,7 +15,7 @@ const connectionString = "mongodb://localhost/tienthang";
 let cacheTime = 1000 * 60 * 60;
 
 if (dev) {
-  cacheTime = 100;
+  cacheTime = 1000*60;
 }
 
 const ssrCache = new LRUCache({
@@ -66,8 +66,11 @@ function renderAndCache(req, res, pagePath, queryParams) {
     }
 
     app
-        .renderToHTML(req, res, pagePath, queryParams)
+        .render(req, res, pagePath, queryParams)
         .then(html => {
+            console.log(`CACHE MISS: ${key}`);
+            ssrCache.set(key, html);
+      
             res.send(html);
         })
         .catch(err => {
