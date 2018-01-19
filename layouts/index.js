@@ -12,6 +12,7 @@ export default ({ children, title = 'Vật liệu xây dựng', description = 'm
                 <meta name="description" content={description} />
                 <link href="/static/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
                 <script src="/static/js/jquery.min.js"></script>
+                <link href="/static/css/flexslider.css" rel="stylesheet" type="text/css" media="screen" />
                 <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
                 <link href="/static/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
                 <script src="/static/js/jquery.magnific-popup.js" type="text/javascript"></script>    
@@ -22,6 +23,11 @@ export default ({ children, title = 'Vật liệu xây dựng', description = 'm
                 <script src="/static/js/responsiveslides.min.js"></script>
                 <link href="/static/css/animate.min.css" rel="stylesheet" />
                 <script src="/static/js/wow.min.js"></script>
+                <script src="/static/js/imagezoom.js"></script>
+                <script src="/static/js/wow.min.js"></script>
+                <script src="/static/js/jquery.flexslider.js"></script>
+                <script src="/static/js/memenu.js"></script>
+                
                 <script>
                     new WOW().init();
                 </script>
