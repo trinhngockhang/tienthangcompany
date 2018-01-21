@@ -1,5 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 
 export default ({ children, title = 'Vật liệu xây dựng', description = 'mua hang online' }) => {
     return (
@@ -17,7 +20,7 @@ export default ({ children, title = 'Vật liệu xây dựng', description = 'm
                 <script src="/static/js/jquery.magnific-popup.js" type="text/javascript"></script>    
                 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
                 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css' />
-                <script src="/static//js/bootstrap.min.js"></script>
+                <script src="/static/js/bootstrap.min.js"></script>
                 <script src="/static/js/simpleCart.min.js"> </script>
                 <script src="/static/js/responsiveslides.min.js"></script>
                 <link href="/static/css/animate.min.css" rel="stylesheet" />
@@ -26,17 +29,9 @@ export default ({ children, title = 'Vật liệu xây dựng', description = 'm
                     new WOW().init();
                 </script>
             </Head>
+            <Header/>
             {children}
-            {/* <script>
-                    $(window).on('load', function() {
-                        $("#slider").responsiveSlides({
-                            auto: true,
-                            speed: 500,
-                            namespace: "callbacks",
-                            pager: true,
-                        })
-                    });
-            </script> */}
+            <Footer/>
         </div>
     )
 }

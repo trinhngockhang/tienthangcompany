@@ -29,6 +29,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['babel-loader', 'raw-loader', 'postcss-loader']
+            },
+            {
+                test: /\.exec\.js$/,
+                use: [ 'script-loader' ]
             }
         )
         config.plugins.push(
