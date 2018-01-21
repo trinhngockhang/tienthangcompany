@@ -16,16 +16,16 @@ export default () => {
 									<span className="simpleCart_total"></span></div>
 									<img src="/static/images/cart.png" alt="" /></h3>
 							</a>
-							<p><a href="javascript:;" className="simpleCart_empty">Giỏ Hàng</a></p>
+							<p><a href="javascript:;" className="simpleCart_empty">Làm mới</a></p>
 
 						</div>
 					</div>
 					<div className="col-sm-2 number animated wow fadeInRight" data-wow-delay=".5s">
-						<span><i className="glyphicon glyphicon-phone"></i>01656577666</span>
+						<span><i className="glyphicon glyphicon-phone" style={{color:'#d72033'}}></i>01656577666</span>
 						<p>Gọi cho chúng tôi</p>
 					</div>
 					<div className="col-sm-2 search animated wow fadeInRight" data-wow-delay=".5s">
-						<a className="play-icon popup-with-zoom-anim" href="#small-dialog"><i className="glyphicon glyphicon-search"> </i> </a>
+						<a className="play-icon popup-with-zoom-anim" href="#small-dialog"><i className="glyphicon glyphicon-search" style={{color:'#d72033'}} > </i> </a>
 					</div>
 					<div className="clearfix"> </div>
 				</div>
@@ -69,7 +69,7 @@ export default () => {
 										</div>
 									</li>
 									<li className="dropdown mega-dropdown active">
-										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Men<span className="caret"></span></a>-->
+										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Men<span className="caret"></span></a>
 								<div className="dropdown-menu mega-dropdown-menu">
 											<div className="container-fluid">
 												<div className="tab-content">

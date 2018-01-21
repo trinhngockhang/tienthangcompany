@@ -18,19 +18,39 @@ var _layouts2 = _interopRequireDefault(_layouts);
 
 var _actions = require('../actions');
 
-var _HomeBody = require('../components/HomeBody');
+var _Header = require('../components/Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _HomeBody = require('../components/Home/HomeBody');
 
 var _HomeBody2 = _interopRequireDefault(_HomeBody);
+
+var _Footer = require('../components/Footer');
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _ImageContent = require('../components/Home/ImageContent');
+
+var _ImageContent2 = _interopRequireDefault(_ImageContent);
+
+var _Content = require('../components/Home/Content');
+
+var _Content2 = _interopRequireDefault(_Content);
+
+var _Cbtm = require('../components/Home/Cbtm');
+
+var _Cbtm2 = _interopRequireDefault(_Cbtm);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
 }
 
-var _ref = (0, _jsx3.default)(_layouts2.default, {}, void 0, (0, _jsx3.default)(_HomeBody2.default, {}));
+var _ref = (0, _jsx3.default)(_layouts2.default, {}, void 0, (0, _jsx3.default)(_HomeBody2.default, {}), (0, _jsx3.default)(_Content2.default, {}), (0, _jsx3.default)(_ImageContent2.default, {}), (0, _jsx3.default)(_Cbtm2.default, {}));
 
 function Home(props) {
     return _ref;
 }
 
 exports.default = Home;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJIb21lIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOztBQUNBOzs7Ozs7Ozs7O3FCQUlhLEFBQ0w7V0FLSDs7O2tCQUdVLEEiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiRzovUmVhY3QgYm9pbGVycGxhdGUifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJIb21lIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7Ozs7OztxQkFHYSxBQUNMO1dBUUg7OztrQkFHVSxBIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ikc6L1JlYWN0IGJvaWxlcnBsYXRlIn0=

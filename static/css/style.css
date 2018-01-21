@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html,body{
 	background:#fff;
 	font-size: 100%;
-	font-family: monospace;
+	font-family: Roboto;
 }
 body a{
 	transition:0.5s all;
@@ -31,7 +31,11 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 /*----*/
 .logo span {
-    color: #fa03bb;
+    color:#d72033;
+}
+.header {
+  
+  background-color: #d5989e1a;
 }
 .header-top {
     padding: 15px 0;
@@ -53,6 +57,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 	color:  #EF5F21;
 }
 .head-top {
+  background-color: #f332321a;
   padding: 0.5em 0;
 }
 .number p {
@@ -223,7 +228,7 @@ ul.nav-list.list-inline li {
 .col-md3 h3 {
     color: #fff;
     font-size: 4em;
-    font-family: 'Poiret One', cursive;
+    font-family: 'Roboto', cursive;
     font-weight: 700;
     background: rgba(250, 3, 187, 0.5);
     padding: 0.3em;
@@ -237,7 +242,7 @@ ul.nav-list.list-inline li {
     font-size: 4em;
     color:#fa03bb;
 	margin:0;
-	font-family: 'Poiret One', cursive;
+	font-family: 'Roboto', cursive;
 	font-weight:700;
 }
 .tes p {
@@ -258,7 +263,7 @@ ul.nav-list.list-inline li {
     color:#ffffff;
     margin: 1em 0 0;
 	text-align:center;
-	font-family: 'Poiret One', cursive;
+	font-family: Roboto;
 	font-weight:700;
 }
 /*--header--*/
@@ -269,8 +274,8 @@ ul.nav-list.list-inline li {
     color: #403b37;
     font-size: 1em;
     text-decoration: none;
-	font-family: 'Poiret One', cursive;
-	font-weight:700;
+	  font-family: Roboto;
+	  font-weight:700;
 }
 .world h6 {
     color: #fa03bb;
@@ -1933,6 +1938,7 @@ ul.nav_1 li {
     padding: 1em;
 }
 .head-top {
+  
     padding: 0;
 }
 }
@@ -2462,6 +2468,7 @@ p.log {
 }
 .head-top {
   padding: 0;
+  
 }
 .content-top h1 {
   font-size: 1.5em;

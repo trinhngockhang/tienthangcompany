@@ -43,72 +43,108 @@ var _ref4 = (0, _jsx3.default)('meta', {
 });
 
 var _ref5 = (0, _jsx3.default)('link', {
-    href: '/static/css/bootstrap-3.1.1.min.css',
+    href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
     rel: 'stylesheet',
     type: 'text/css'
 });
 
 var _ref6 = (0, _jsx3.default)('script', {
-    src: '/static/js/jquery.min.js'
+    src: '/static/js/jquery.min.js',
+    async: true
 });
 
 var _ref7 = (0, _jsx3.default)('link', {
+    href: '/static/css/flexslider.css',
+    rel: 'stylesheet',
+    type: 'text/css',
+    media: 'screen'
+});
+
+var _ref8 = (0, _jsx3.default)('link', {
     href: '/static/css/style.css',
     rel: 'stylesheet',
     type: 'text/css',
     media: 'all'
 });
 
-var _ref8 = (0, _jsx3.default)('link', {
+var _ref9 = (0, _jsx3.default)('link', {
     href: '/static/css/popuo-box.css',
     rel: 'stylesheet',
     type: 'text/css',
     media: 'all'
 });
 
-var _ref9 = (0, _jsx3.default)('script', {
+var _ref10 = (0, _jsx3.default)('script', {
     src: '/static/js/jquery.magnific-popup.js',
     type: 'text/javascript'
 });
 
-var _ref10 = (0, _jsx3.default)('link', {
+var _ref11 = (0, _jsx3.default)('link', {
     href: 'http://fonts.googleapis.com/css?family=Raleway',
     rel: 'stylesheet',
     type: 'text/css'
 });
 
-var _ref11 = (0, _jsx3.default)('link', {
+var _ref12 = (0, _jsx3.default)('link', {
+    href: 'http://fonts.googleapis.com/css?family=Roboto',
+    rel: 'stylesheet',
+    type: 'text/css'
+});
+
+var _ref13 = (0, _jsx3.default)('link', {
     href: 'http://fonts.googleapis.com/css?family=Poiret+One',
     rel: 'stylesheet',
     type: 'text/css'
 });
 
-var _ref12 = (0, _jsx3.default)('script', {
+var _ref14 = (0, _jsx3.default)('script', {
     src: '/static/js/bootstrap.min.js'
 });
 
-var _ref13 = (0, _jsx3.default)('script', {
+var _ref15 = (0, _jsx3.default)('script', {
     src: '/static/js/simpleCart.min.js'
 }, void 0, ' ');
 
-var _ref14 = (0, _jsx3.default)('script', {
-    src: '/static/js/responsiveslides.min.js'
+var _ref16 = (0, _jsx3.default)('script', {
+    src: '/static/js/responsiveslides.min.js',
+    defer: true
 });
 
-var _ref15 = (0, _jsx3.default)('link', {
+var _ref17 = (0, _jsx3.default)('link', {
     href: '/static/css/animate.min.css',
     rel: 'stylesheet'
 });
 
-var _ref16 = (0, _jsx3.default)('script', {
+var _ref18 = (0, _jsx3.default)('script', {
     src: '/static/js/wow.min.js'
 });
 
-var _ref17 = (0, _jsx3.default)('script', {}, void 0, 'new WOW().init();');
+var _ref19 = (0, _jsx3.default)('script', {
+    src: '/static/js/imagezoom.js'
+});
 
-var _ref18 = (0, _jsx3.default)(_Header2.default, {});
+var _ref20 = (0, _jsx3.default)('script', {
+    src: '/static/js/wow.min.js'
+});
 
-var _ref19 = (0, _jsx3.default)(_Footer2.default, {});
+var _ref21 = (0, _jsx3.default)('script', {
+    src: '/static/js/jquery.flexslider.js'
+});
+
+var _ref22 = (0, _jsx3.default)('script', {
+    src: '/static/js/memenu.js'
+});
+
+var _ref23 = (0, _jsx3.default)('script', {}, void 0, 'new WOW().init();');
+
+var _ref24 = (0, _jsx3.default)('script', {
+    src: '/static/js/load.js',
+    defer: true
+});
+
+var _ref25 = (0, _jsx3.default)(_Header2.default, {});
+
+var _ref26 = (0, _jsx3.default)(_Footer2.default, {});
 
 exports.default = function (_ref) {
     var children = _ref.children,
@@ -120,6 +156,6 @@ exports.default = function (_ref) {
     return (0, _jsx3.default)('div', {}, void 0, (0, _jsx3.default)(_head2.default, {}, void 0, _ref2, _ref3, _ref4, (0, _jsx3.default)('title', {}, void 0, title), (0, _jsx3.default)('meta', {
         name: 'description',
         content: description
-    }), _ref5, _ref6, _ref7, _ref8, _ref9, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17), _ref18, children, _ref19);
+    }), _ref5, _ref6, _ref7, _ref8, _ref9, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref20, _ref21, _ref22, _ref23, _ref24), _ref25, children, _ref26);
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxheW91dHNcXGluZGV4LmpzIl0sIm5hbWVzIjpbImNoaWxkcmVuIiwidGl0bGUiLCJkZXNjcmlwdGlvbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7Ozs7YUFPOEI7Ozs7ZUFDRSxBO2FBQTBCOzs7O1UsQUFDL0I7YUFBbUI7Ozs7VUFHbkIsQTtTQUEwQyxBO1VBQWtCOzs7O1NBQzNEOzs7O1VBQ0QsQTtTQUE0QixBO1VBQWtCLEE7V0FBaUI7Ozs7VSxBQUMvRDtTLEFBQWdDO1UsQUFBa0I7V0FBaUI7Ozs7U0FDbEUsQTtVQUEyQzs7OztVQUM1QyxBO1NBQXFELEE7VUFBa0I7Ozs7VUFDdkUsQTtTQUF3RCxBO1VBQWtCOzs7O1NBQ3pFOzs7O1NBQ0E7Ozs7U0FDQTs7OztVQUNELEE7U0FBa0M7Ozs7U0FDakM7Ozs7Ozs7OztrQkFwQmIsZ0JBQWdGO1FBQTdFLEFBQTZFLGdCQUE3RSxBQUE2RTswQkFBbkUsQUFBbUU7UUFBbkUsQUFBbUUsbUNBQTNELEFBQTJELHNCQUFBO2dDQUF0QyxBQUFzQztRQUF0QyxBQUFzQywrQ0FBeEIsQUFBd0Isb0JBQzNGOzs2SkFBQSxBQU1vQjtjQU5wQixBQU91QjtpQkFQdkIsQUFPOEM7QUFQOUMsb0hBQUEsQUF5QlMsVUFJWjtBIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ikc6L1JlYWN0IGJvaWxlcnBsYXRlIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxheW91dHNcXGluZGV4LmpzIl0sIm5hbWVzIjpbImNoaWxkcmVuIiwidGl0bGUiLCJkZXNjcmlwdGlvbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7Ozs7YUFPOEI7Ozs7ZSxBQUNFO2FBQTBCOzs7O1UsQUFDL0I7YUFBbUI7Ozs7VUFHbkIsQTtTQUE0RSxBO1VBQWtCOzs7O1MsQUFDN0Y7Ozs7O1UsQUFDRDtTQUFpQyxBO1VBQWtCLEE7V0FBaUI7Ozs7VUFDcEUsQTtTQUE0QixBO1UsQUFBa0I7V0FBaUI7Ozs7VUFDL0QsQTtTQUFnQyxBO1VBQWtCLEE7V0FBaUI7Ozs7U0FDbEUsQTtVQUEyQzs7OztVQUM1QyxBO1MsQUFBcUQ7VUFBa0I7Ozs7VUFDdkUsQTtTQUFvRCxBO1VBQWtCOzs7O1VBQ3RFLEE7U0FBd0QsQTtVQUFrQjs7OztTQUN6RTs7OztTQUNBOzs7O1NBQ0EsQTs7Ozs7VUFDRCxBO1NBQWtDOzs7O1NBQ2pDOzs7O1NBQ0E7Ozs7U0FDQTs7OztTQUNBOzs7O1NBQ0E7Ozs7OztTLEFBSUE7Ozs7Ozs7O2tCQTlCYixnQkFBZ0Y7UUFBN0UsQUFBNkUsZ0JBQTdFLEFBQTZFOzBCQUFuRSxBQUFtRTtRQUFuRSxBQUFtRSxtQ0FBM0QsQUFBMkQsc0JBQUE7Z0NBQXRDLEFBQXNDO1FBQXRDLEFBQXNDLCtDQUF4QixBQUF3QixvQkFDM0Y7OzZKQUFBLEFBTW9CO2NBTnBCLEFBT3VCO2lCQVB2QixBQU84QztBQVA5Qyw0S0FBQSxBQWdDUyxVQUlaO0EiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiRzovUmVhY3QgYm9pbGVycGxhdGUifQ==
