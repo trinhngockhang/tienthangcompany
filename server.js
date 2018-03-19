@@ -22,8 +22,8 @@ app.prepare().then(() => {
           }
         }))
     server.use(compression());
-    server.use(bodyParser.json({ extend: true }));
-    server.use(bodyParser.urlencoded({ extend: true }));
+    server.use(bodyParser.json({limit:'50mb'}));
+    server.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
     server.use('/product',product);
     server.use('/admin',admin);
     //listen

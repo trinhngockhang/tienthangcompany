@@ -1,7 +1,39 @@
 const express= require('express');
 const Router = express.Router();
 const productController= require('./productController');
+const multer = require('multer');
 
+const multerConf = {
+    storage : multer.diskStorage({
+        destination : function(req,file,next){
+            next(null,'upload');
+        },
+    filename: function(req,file,next){
+        const ext = file.mimetype.split('/')[1];
+        next(null,file.fieldname + '-' + Date.now() + '.' + ext);  
+    }    
+    }),
+    fileFilter: function(req,file,next){
+        if(!file){
+            next();
+        }
+        const image = file.mimetype.startsWith('image/');
+        if(image){
+            next(null,true);
+        }else{
+            
+        }
+    }
+}
+  
+Router.post('/test',multer(multerConf).single('productName'),(req,res) => {
+    res.send("done");
+    if(req.file){
+        console.log(req.file);
+        req.body.productName = req.file.filename;
+    }
+})
+ 
 Router.post('/add',(req,res) => {
     var product = {};
     product.name = req.body.name;
@@ -14,9 +46,6 @@ Router.post('/add',(req,res) => {
     })
 })
 
-Router.get("/",(req,res) =>{
-    res.send("a");
-})
 
 Router.delete('/delete',(req,res) =>{
     var id = req.body.id;

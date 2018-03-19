@@ -13,8 +13,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html,body{
 	background:#fff;
 	font-size: 100%;
-	font-family: Roboto;
+  font-family: Roboto;
+  background:  rgb(241, 236, 243)
 }
+
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -32,10 +34,6 @@ h1,h2,h3,h4,h5,h6,label,p{
 /*----*/
 .logo span {
     color:#d72033;
-}
-.header {
-  
-  background-color: #d5989e1a;
 }
 .header-top {
     padding: 15px 0;
@@ -57,7 +55,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 	color:  #EF5F21;
 }
 .head-top {
-  background-color: #f332321a;
+  background-color: #563d7c;
   padding: 0.5em 0;
 }
 .number p {
@@ -201,7 +199,7 @@ ul.nav_1 li {
 	margin-right:0px;
 }
 ul.nav_1 li a {
-	color: #7e7e7e;
+	color: #fff;
 }
 ul.nav_1 li.last{
 	margin-right:0;
@@ -240,14 +238,14 @@ ul.nav-list.list-inline li {
 }
 .tes h2 {
     font-size: 4em;
-    color:#fa03bb;
+    color:#563d7c;
 	margin:0;
 	font-family: 'Roboto', cursive;
 	font-weight:700;
 }
 .tes p {
     font-size: 2em;
-    color: #fa03bb;
+    color: #563d7c;
     margin: 0.5em;
 	text-align:right;
 }
@@ -278,13 +276,13 @@ ul.nav-list.list-inline li {
 	  font-weight:700;
 }
 .world h6 {
-    color: #fa03bb;
+    color: #563d7c;
     font-size: 1.2em;
     margin: 0;
 	font-family: 'OleoScript-Regular';
 }
 .world p {
-    color: #fa03bb;
+    color: #563d7c;
     font-size: 0.9em;
     margin: 0;
 }
@@ -293,7 +291,7 @@ ul.nav-list.list-inline li {
   margin-top: 1%;
 }
 i.glyphicon.glyphicon-search {
-  color:#fa03bb;
+  color:#563d7c;
   font-size: 1em;
 }
 .world {
@@ -375,7 +373,7 @@ a.item_add {
   }
 .rslides img {
   display: block;
-  height: auto;
+  height: 350px;
   float: left;
   width: 100%;
   border: 0;
@@ -393,7 +391,7 @@ a.item_add {
 	border-radius:50px;
 }
 .callbacks_here a:after{
-	background:#fa03bb;
+	background:#563d7c;
 }
 .callbacks_tabs a{
 	visibility:hidden;
@@ -432,7 +430,7 @@ ul.callbacks_tabs.callbacks1_tabs {
     color: #000;
 }
 .col-md1 h3 a {
-    color: #fa03bb;
+    color: #563d7c;
     text-decoration: none;
     font-family: 'Poiret One', cursive;
     font-weight: 700;
@@ -468,7 +466,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
 .col-md1:hover .price a {
-  background-color:#fa03bb;
+  background-color:#563d7c;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -565,14 +563,14 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .top-footer1 h3 {
     font-size: 2em;
-    color: #fa03bb;
+    color: #563d7c;
     margin: 0 0 0.5em;
 	font-family: 'Poiret One', cursive;
 	font-weight:700;
 }
 .top-footer h3 {
     font-size: 2em;
-    color: #fa03bb;
+    color: #563d7c;
     margin: 0 0 0.5em;
 	font-family: 'Poiret One', cursive;
 	font-weight:700;
@@ -597,7 +595,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   outline: none;
 }
 .top-footer1 input[type="submit"]:hover {
-  background-color:#fa03bb;
+  background-color:#563d7c;
 }
 .footer {
   border-top: 1px solid #BDBDBD;
@@ -607,7 +605,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .footer-bottom-cate h6 {
     font-size: 1.6em;
-    color: #fa03bb;
+    color: #563d7c;
     margin: 0 0 1em;
 	font-family: 'Poiret One', cursive;
 	font-weight:700;
@@ -634,7 +632,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	color: #B2B2B2;
 }
 .cate-bottom ul li.phone {
-	color:#fa03bb;
+	color:#563d7c;
 	padding: 1em 0 0em;
 }
 p.footer-class {
@@ -645,7 +643,7 @@ p.footer-class {
 }
 p.footer-class a{
   text-decoration:none;
-  color: #fa03bb;
+  color: #563d7c;
 }
 p.footer-class a:hover{
   color:  #B2B2B2;
@@ -671,7 +669,7 @@ p.footer-class a:hover{
 }
 .contact h3 {
     font-size: 3em;
-    color: #fa03bb;
+    color: #563d7c;
     margin: 0 0px 1em;
     text-align: center;
 	font-family: 'Poiret One', cursive;
@@ -724,7 +722,7 @@ p.footer-class a:hover{
 	-ms-transition: 0.5s all;
 }
 .contact-form input[type="submit"]:hover{
-	background: #fa03bb;
+	background: #563d7c;
 }
 .address-grid i{
 	color:#403b37;
@@ -748,10 +746,10 @@ p.footer-class a:hover{
 	color: #b2b2b2;
 }
 .address1 p a:hover{
-	color:#fa03bb;
+	color:#563d7c;
 }
 .address-more h2{
-	color:#fa03bb;
+	color:#563d7c;
 	font-size:2em;
 	margin: 0 15px 0.7em;
 	font-family: 'Poiret One', cursive;
@@ -770,7 +768,7 @@ p.footer-class a:hover{
 .breadcrumb1 li span {
     left: 0em;
     padding-right: 1em;
-    color: #fa03bb;
+    color: #563d7c;
 }
 .breadcrumbs {
     padding: 1.5em 0 !important;
@@ -782,7 +780,7 @@ p.footer-class a:hover{
      margin-bottom: 0 !important;
 }
 .breadcrumb1 li a {
-    color: #fa03bb;
+    color: #563d7c;
     text-decoration: none;
 }
 .breadcrumb > .active {
@@ -794,7 +792,7 @@ p.footer-class a:hover{
 }
 /*--login--*/
 .account h2 {
-    color: #fa03bb;
+    color: #563d7c;
     font-size: 3em;
     margin: 0 0 1em;
     text-align: center;
@@ -802,7 +800,7 @@ p.footer-class a:hover{
 	font-weight:700;
 }
 .login-left h4{
-	color:#fa03bb;
+	color:#563d7c;
 	font-size: 1.3em;
 }
  .login-left p {
@@ -826,7 +824,7 @@ p.footer-class a:hover{
 	text-transform: uppercase;
 }
 .acount-btn:hover, .login-right input[type="submit"]:hover{
-	background:#fa03bb;
+	background:#563d7c;
 	text-decoration:none;
 	color:#fff;
 }
@@ -844,7 +842,7 @@ p.footer-class a:hover{
 }
 .login-right input[type="text"] {
 	border: 1px solid #bbb;
-	outline-color:#fa03bb;
+	outline-color:#563d7c;
 	width: 96%;
 	font-size:0.9em;
 	padding:10px;
@@ -852,7 +850,7 @@ p.footer-class a:hover{
 }
 .login-right input[type="password"] {
 	border: 1px solid #bbb;
-	outline-color:#fa03bb;
+	outline-color:#563d7c;
 	width: 96%;
 	font-size:0.9em;
 	padding:10px;
@@ -916,7 +914,7 @@ ul.social {
 }
 /*--register--*/
 .register h2 {
-	color:#fa03bb;
+	color:#563d7c;
 	font-size:3em;
 	margin:0 0 1em;
 	text-align:center;
@@ -931,7 +929,7 @@ ul.social {
 }
 .register-top-grid input[type="text"], .register-bottom-grid input[type="password"] {
 	border: 1px solid #EEE;
-	outline-color:#fa03bb;
+	outline-color:#563d7c;
 	width: 100%;
 	font-size: 1em;
 	padding: 0.5em;
@@ -939,7 +937,7 @@ ul.social {
 }
 .register-bottom-grid input[type="password"] {
 	border: 1px solid #EEE;
-	outline-color:#fa03bb;
+	outline-color:#563d7c;
 	width: 100%;
 	font-size: 1em;
 	padding: 0.5em;
@@ -980,7 +978,7 @@ ul.social {
 	width:20px;
 	height:20px;
 	outline: none;
-	border: 2px solid #fa03bb;
+	border: 2px solid #563d7c;
 }
 .checkbox input + i:after {
     content: '';
@@ -1015,7 +1013,7 @@ ul.social {
 	margin-top:1em;
 }
 .register-but form input[type="submit"] {
-	background:#fa03bb;
+	background:#563d7c;
 	color: #FFF;
 	font-size:1em;
 	padding: 0.4em 1em;
@@ -1038,7 +1036,7 @@ ul.social {
 }
 /*--product--*/
 .products h2{
-	color:#fa03bb;
+	color:#563d7c;
 	font-size: 3em;
 	text-align: center;
 	margin: 0 0 1em;
@@ -1050,7 +1048,7 @@ ul.social {
 }
 /*--menu-drop--*/
 h3.cate {
-    color: #fa03bb;
+    color: #563d7c;
     font-size: 1.5em;
     font-family: 'Poiret One', cursive;
     font-weight: 700;
@@ -1121,7 +1119,7 @@ span.price-in1 {
   font-size: 1.3em;
   padding: 0.3em 0 0;
   display: block;
-  color:#fa03bb;
+  color:#563d7c;
 }
 .product-go {
   padding: 1em 0;
@@ -1163,7 +1161,7 @@ span.price-in1 {
 /*--single--*/
 .single-para h2 {
     font-size: 1.5em;
-    color: #fa03bb;
+    color: #563d7c;
     line-height: 1.5em;
     font-family: 'Poiret One', cursive;
     font-weight: 700;
@@ -1171,7 +1169,7 @@ span.price-in1 {
 label.add-to{
 	display:block;
 	font-size: 2em;
-	color:#fa03bb;
+	color:#563d7c;
 }
 .single-para p{
 	font-size:0.9em;
@@ -1190,7 +1188,7 @@ a.cart{
   text-decoration:none;
 }
 a.cart:hover{
-	background:#fa03bb;
+	background:#563d7c;
 }
 /*----*/
 .star-on {
@@ -1216,7 +1214,7 @@ a.cart:hover{
 	color:#403b37;
 }
 .star-on a:hover{
-	color:#fa03bb;
+	color:#563d7c;
 }
 .single-bottom h4{
 	color:#000;
@@ -1300,7 +1298,7 @@ a.at-in {
 }
 .check-out h2 {
     font-size: 3em;
-  color: #fa03bb;
+  color: #563d7c;
   margin: 0 0px 1em;
   text-align: center;
 }
@@ -1316,7 +1314,7 @@ a.to-buy{
   text-decoration: none;
 }
 a.to-buy:hover{
-  background: #fa03bb;
+  background: #563d7c;
 }
 /*--//checkout--*/
 /*-- content --*/
@@ -1588,7 +1586,7 @@ a.to-buy:hover{
 }
 .info-content h4 {
     font-size: 35px;
-    color: #fa03bb;
+    color: #563d7c;
     text-transform: uppercase;
 }
 /*-- //content --*/
@@ -1922,7 +1920,7 @@ ul.nav_1 li {
     width: 22px;
     height: 3px;
     border-radius: 1px;
-    background-color: #fa03bb;
+    background-color: #563d7c;
 }
 .nav-list > li {
     padding: 0px 15px 15px;
@@ -2734,3 +2732,4 @@ th {
     font-size: 0.875em;
 }
 }
+
