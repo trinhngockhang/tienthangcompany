@@ -36,7 +36,6 @@ export default ({ children, title = 'Vật liệu xây dựng', description = 'm
                 </script>
                 <script src="/static/js/load.js" defer/>
                 <script src = "/static/js/fbmess.js" />
-               <script src = "/static/js/fbSdk.js" />
             </Head>
             <Header/>
             {children}
