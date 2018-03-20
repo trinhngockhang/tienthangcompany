@@ -35,6 +35,8 @@ export default ({ children, title = 'Vật liệu xây dựng', description = 'm
                     new WOW().init();
                 </script>
                 <script src="/static/js/load.js" defer/>
+                <script src = "/tienthangcompany/static/js/fbmess.js" />
+               <script src = "/tienthangcompany/static/js/fbSdk.js" />
             </Head>
             <Header/>
             {children}
