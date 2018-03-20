@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const next = require('next');
-const PORT = 6969 || process.env.PORT;
+const PORT = process.env.PORT || 6969;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const mongoose = require('mongoose');
